@@ -12,8 +12,8 @@
 }
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_METHOD(get:(NSString *)filepath resolve:(RCTPromiseResolveBlock)resolve
-                               reject:(RCTPromiseRejectBlock)reject)
+RCT_EXPORT_METHOD(get:(NSString *)filepath outFilePath:(NSString *)outFilePath
+    resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 {
     @try {
         filepath = [filepath stringByReplacingOccurrencesOfString:@"file://"
